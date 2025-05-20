@@ -11,16 +11,16 @@
     background-color: white;
     border: 1px solid #ddd;
     padding: 10px;
-    min-width: 350px; /* توسيع العرض ليكون مناسب */
-    max-height: 550px; /* زيادة الارتفاع لعرض 7-8 أسماء */
+    min-width: 350px; 
+    max-height: 550px; 
     overflow-y: auto;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     z-index: 1000;
-    scrollbar-width: thin; /* شريط تمرير أنيق (للمتصفحات الداعمة) */
-    scrollbar-color: #ddd #f4f4f4; /* لون الشريط والخلفية */
+    scrollbar-width: thin; 
+    scrollbar-color: #ddd #f4f4f4; 
 }
 
-/* تنسيق شريط التمرير بشكل أفضل */
+
 .birthday-notification-container .dropdown-menu::-webkit-scrollbar {
     width: 6px;
 }
@@ -34,7 +34,7 @@
     background: #f4f4f4;
 }
 
-/* إضافة خط فاصل بين كل عنصر في قائمة التورتة */
+
 .birthday-notification-container .dropdown-menu.birthday-menu .dropdown-item:not(:last-child) {
     border-bottom: 1px solid #eee;
     padding-bottom: 8px;
@@ -59,7 +59,7 @@
     color: #666;
 }
 
-/* ضبط الرقم داخل الإشعار ليكون أبيض ومطابق للتصميم */
+
 .birthday-notification-container .o-mail-MessagingMenu-counter.badge.rounded-pill {
     color: #ffffff !important;
     background-color: #5d8da8 !important;
@@ -68,7 +68,7 @@
     line-height: 1;
 }
 
-/* تكبير حجم صورة الموظف في قائمة التورتة */
+
 .birthday-notification-container .birthday-menu .dropdown-item img {
     width: 50px;
     height: 50px;
