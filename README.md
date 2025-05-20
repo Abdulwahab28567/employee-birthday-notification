@@ -15,18 +15,17 @@ This module allows you to **track employee birthdays** directly from the Odoo sy
 ## 🖼️ Screenshots
 
 ### 1. Grant group access to view the systray icon
-![Grant Access](first.png)
+![Grant Access](sdm_birthday_notification/static/description/first.png)
 
 ---
 
 ### 2. Systray icon with birthday notification
-![Systray](second.png)
+![Systray](sdm_birthday_notification/static/description/second.png)
 
 ---
 
 ### 3. Birthday List - Upcoming employee birthdays
-![Birthday List](third.png)
-
+![Birthday List](sdm_birthday_notification/static/description/third.png)
 ---
 
 ## 🛠️ Technical Details
