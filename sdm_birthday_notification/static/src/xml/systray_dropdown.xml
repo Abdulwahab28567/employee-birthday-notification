@@ -1,88 +1,11 @@
-<!-- <templates xml:space="preserve">
-    <t t-name="sdm_birthday_notification.SystrayDropdown" owl="1">
-        <div class="dropdown-container" t-on-click="toggleDropdown">
-            <i class="fa fa-bell"></i>
-            <div class="dropdown-menu" t-if="state.isDropdownOpen" style="display: block; position: absolute; background: white; border: 1px solid #ddd; padding: 5px; width: 200px;">
-                <t t-if="state.notifications.length">
-                    <t t-foreach="state.notifications" t-as="notification" t-key="notification.id">
-                        <div class="dropdown-item" t-on-click="markAsRead(notification.id)">
-                            <t t-esc="notification.message"/>
-                        </div>
-                    </t>
-                </t>
-                <t t-if="!state.notifications.length">
-                    <div class="dropdown-item">No upcoming birthdays.</div>
-                </t>
-            </div>
-        </div>
-    </t>
-</templates> -->
-
-<!-- <templates xml:space="preserve">
-    <t t-name="sdm_birthday_notification.SystrayDropdown">
-        <div class="dropdown d-flex align-items-center">
-            <button class="btn btn-link" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown"
-                    aria-expanded="false">
-                <i class="fa fa-bell"></i>
-            </button>
-            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                <t t-foreach="state.birthdays" t-as="employee" t-key="employee.id">
-                    <li t-attf-class="dropdown-item cursor-pointer #{employee.isNearest ? 'text-danger fw-bold' : ''}">
-                        <strong><t t-esc="employee.name"/></strong>: <t t-esc="employee.birthday"/>
-                    </li>
-                </t>
-                <t t-if="!state.birthdays.length">
-                    <li class="dropdown-item text-muted">No birthdays this week.</li>
-                </t>
-            </ul>
-        </div>
-    </t>
-</templates> -->
-
-<!-- <templates xml:space="preserve">
-    <t t-name="sdm_birthday_notification.SystrayDropdown">
-        <div class="dropdown d-flex align-items-center position-relative">
-            <button class="btn btn-link position-relative o_mail_discuss_systray" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown"
-                    aria-expanded="false">
-                <i class="fa fa-birthday-cake text-light"></i>
-                <span t-if="state.birthdays.length > 0" class="o-mail-MessagingMenu-counter badge rounded-pill">
-                    <t t-esc="state.birthdays.length"/>
-                </span>
-            </button>
-            <ul class="dropdown-menu p-3 shadow-lg" aria-labelledby="dropdownMenuButton" style="width: 280px;">
-                <h6 class="dropdown-header text-primary text-center">🎂 BIRTHDAY REMINDER</h6>
-                <hr class="mt-1 mb-2"/>
-                <t t-foreach="state.birthdays" t-as="employee" t-key="employee.id">
-                    <li class="dropdown-item d-flex align-items-center gap-2">
-                        <img t-if="employee.image_url" t-att-src="employee.image_url" class="rounded-circle" width="32" height="32"/>
-                        <t t-if="!employee.image_url">
-                            <i class="fa fa-user-circle text-secondary" style="font-size: 32px;"></i>
-                        </t>
-                        <div>
-                            <strong>
-                                <t t-if="employee.isNearest">🎂 </t>
-                                <t t-esc="employee.name" t-att-class="employee.isNearest ? 'text-danger fw-bold' : ''"/>
-                            </strong>
-                            <div class="text-muted small mt-1"><t t-esc="employee.birthday"/></div>
-                        </div>
-                    </li>
-                </t>
-                <t t-if="!state.birthdays.length">
-                    <li class="dropdown-item text-muted text-center">No birthdays this week.</li>
-                </t>
-            </ul>
-        </div>
-    </t>
-</templates> -->
-
 <templates xml:space="preserve">
     <t t-name="sdm_birthday_notification.SystrayDropdown">
         <div class="birthday-notification-container dropdown d-flex align-items-center position-relative">
             <button class="btn btn-link position-relative o_mail_discuss_systray" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown"
                     aria-expanded="false">
                 <i class="fa fa-birthday-cake text-light"></i>
-                <span t-if="state.birthdays.length > 0" class="o-mail-MessagingMenu-counter badge rounded-pill">
-                    <t t-esc="state.birthdays.length"/>
+                <span t-if="state.upcomingCount > 0" class="o-mail-MessagingMenu-counter badge rounded-pill">
+                    <t t-esc="state.upcomingCount"/>
                 </span>
             </button>
             <ul class="dropdown-menu p-3 shadow-lg birthday-menu" aria-labelledby="dropdownMenuButton" style="width: 280px;">
@@ -115,7 +38,3 @@
         </div>
     </t>
 </templates>
-
-
-
-
