@@ -1,0 +1,77 @@
+.birthday-notification-container .dropdown-container {
+    position: relative;
+    cursor: pointer;
+    padding: 10px;
+}
+
+.birthday-notification-container .dropdown-menu {
+    position: absolute;
+    top: 30px;
+    right: 0;
+    background-color: white;
+    border: 1px solid #ddd;
+    padding: 10px;
+    min-width: 350px; /* توسيع العرض ليكون مناسب */
+    max-height: 550px; /* زيادة الارتفاع لعرض 7-8 أسماء */
+    overflow-y: auto;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    z-index: 1000;
+    scrollbar-width: thin; /* شريط تمرير أنيق (للمتصفحات الداعمة) */
+    scrollbar-color: #ddd #f4f4f4; /* لون الشريط والخلفية */
+}
+
+/* تنسيق شريط التمرير بشكل أفضل */
+.birthday-notification-container .dropdown-menu::-webkit-scrollbar {
+    width: 6px;
+}
+
+.birthday-notification-container .dropdown-menu::-webkit-scrollbar-thumb {
+    background-color: #ddd;
+    border-radius: 4px;
+}
+
+.birthday-notification-container .dropdown-menu::-webkit-scrollbar-track {
+    background: #f4f4f4;
+}
+
+/* إضافة خط فاصل بين كل عنصر في قائمة التورتة */
+.birthday-notification-container .dropdown-menu.birthday-menu .dropdown-item:not(:last-child) {
+    border-bottom: 1px solid #eee;
+    padding-bottom: 8px;
+    margin-bottom: 8px;
+}
+
+.birthday-notification-container .dropdown-item {
+    font-size: 14px;
+    color: #333;
+    padding: 8px 12px;
+}
+
+.birthday-notification-container .dropdown-item:hover {
+    background-color: #f4f4f4;
+}
+
+.birthday-notification-container .dropdown-item.text-danger {
+    color: #dc3545;
+}
+
+.birthday-notification-container .dropdown-item small {
+    color: #666;
+}
+
+/* ضبط الرقم داخل الإشعار ليكون أبيض ومطابق للتصميم */
+.birthday-notification-container .o-mail-MessagingMenu-counter.badge.rounded-pill {
+    color: #ffffff !important;
+    background-color: #5d8da8 !important;
+    font-size: 12px;
+    padding: 2px 6px;
+    line-height: 1;
+}
+
+/* تكبير حجم صورة الموظف في قائمة التورتة */
+.birthday-notification-container .birthday-menu .dropdown-item img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+}
